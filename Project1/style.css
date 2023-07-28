@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.addBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+}
+
+img {
+    width: 170px;
+    border-radius: 20px;
+    border: transparent;
+}
+
+.blogs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+    width: 200px;
+    box-shadow: 0 0 3px 0.1px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: transparent;
+}
+
+.readBtn {
+    width: fit-content;
+    padding: 6px 67px;
+    color: rgb(245, 67, 67);
+    background-color: rgb(255, 199, 199);
+    border: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+}
