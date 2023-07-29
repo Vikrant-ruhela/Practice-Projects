@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [task, setTask] = useState("")
   const [data, setData] = useState([])
-  const [status, setStatus] = useState("Pending")
+  const [status, setStatus] = useState([])
 
   function handleChange(event) {
     setTask(event.target.value)
@@ -16,6 +16,8 @@ function App() {
       return updated
     })
     setTask("")
+    status.length == 0 ? setStatus(["Pending"]) :
+      setStatus([...status, "Pending"])
   }
 
   function handleRemove(index) {
@@ -23,10 +25,16 @@ function App() {
       return (ind !== index)
     })
     setData([...updatedDAta])
+    const updatedStatus = status.filter((element, id) => {
+      return (id !== index)
+    })
+    setStatus([...updatedStatus])
   }
 
-  function handleUpdate() {
-    status == "Pending" ? setStatus("Complete") : setStatus("Pending")
+  function handleUpdate(index) {
+    const updatedSTatus = status
+    updatedSTatus[index] = "Complete"
+    setStatus([...updatedSTatus])
   }
 
   return (
@@ -42,11 +50,11 @@ function App() {
             <div className="flex flex-col bg-slate-900 text-white rounded-lg justify-center pt-4 pb-4 mr-4 ml-4 mt-4 mb-4 pl-8 pr-8" key={index}>
 
               <h1>
-                {index + 1}{element}
+                {`${index + 1}. `}{element}
               </h1>
 
-              <p>Status:{status}</p>
-              <button className='text-white bg-blue-900 w-48 h-10 m-auto font-medium rounded-lg mb-4 mt-4' onClick={handleUpdate} >Update Status</button>
+              <p>Status : {status[index]}</p>
+              <button className='text-white bg-blue-900 w-48 h-10 m-auto font-medium rounded-lg mb-4 mt-4' onClick={() => { handleUpdate(index) }} >Update Status</button>
               <button className='text-white bg-blue-900 w-48 h-10 m-auto font-medium rounded-lg' onClick={() => { handleRemove(index) }} >Remove</button>
             </div>
 
