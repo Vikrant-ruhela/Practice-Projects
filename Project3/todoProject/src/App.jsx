@@ -33,12 +33,16 @@ function App() {
 
   function handleUpdate(index) {
     const updatedSTatus = status
-    updatedSTatus[index] = "Complete"
+    if (updatedSTatus[index] == "Pending") {
+      updatedSTatus[index] = "Complete"
+    } else {
+      updatedSTatus[index] = "Pending"
+    }
     setStatus([...updatedSTatus])
   }
 
   return (
-    <div className="flex bg-gradient-to-b from-purple-600 to-black h-screen items-center justify-center flex-col pt-20 pb-8">
+    <div className="flex  items-center justify-center flex-col pt-20 pb-8">
       <div className="flex h-16 bg-white pr-4 pl-4 rounded-lg mb-8">
         <input type="text" placeholder='Enter Todo' className='focus:outline-none' value={task} onChange={handleChange} />
         <button className='text-white bg-purple-700 w-24 h-10 m-auto font-medium rounded-lg hover:bg-purple-900' onClick={handleClick} >Add</button>
