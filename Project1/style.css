@@ -135,10 +135,6 @@ img {
     width: 100%;
 }
 
-/* section {
-    display: none;
-} */
-
 article {
     flex-direction: column;
     height: 100vh;
@@ -174,4 +170,11 @@ article .headingBlog img {
     height: 200px;
     width: 300px;
     border: 2px solid #fff;
+}
+
+.backBtn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
 }

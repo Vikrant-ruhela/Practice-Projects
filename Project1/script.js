@@ -1,4 +1,5 @@
 const addBtn = document.querySelector(".addBtn")
+const backBtn = document.querySelector(".backBtn")
 const popup = document.querySelector(".popup")
 const section = document.querySelector("section")
 const article = document.querySelector("article")
@@ -76,6 +77,8 @@ const btnClicked = (event) => {
     const elementObj = localStorage.getItem(e)
     section.style.display = "none"
     article.style.display = "flex"
+    addBtn.style.display = "none"
+    backBtn.style.display = "flex"
     const json = JSON.parse(elementObj)
     article.innerHTML = `<div>
     <div class="headingBlog">
@@ -87,6 +90,9 @@ const btnClicked = (event) => {
     </div>
     <p>${json.blogText}</p>
 </div>`
-
 }
+
+backBtn.addEventListener('click', () => {
+    window.location.href = "http://127.0.0.1:5500/index.html"
+})
 
