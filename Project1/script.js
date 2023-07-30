@@ -1,6 +1,7 @@
 const addBtn = document.querySelector(".addBtn")
 const popup = document.querySelector(".popup")
 const section = document.querySelector("section")
+const article = document.querySelector("article")
 const sub = document.querySelector(".sub")
 
 const blogUrl = document.getElementById("blogUrl")
@@ -8,8 +9,8 @@ const blogTitle = document.getElementById("blogTitle")
 const blogDescription = document.getElementById("blogDescription")
 const blogText = document.getElementById("blogText")
 
+
 const blogBtn = document.querySelector(".blogBtn")
-// const readBtn = document.querySelector(".readBtn")
 
 const blogsGrid = document.querySelector(".blogs")
 let blogs = ""
@@ -27,7 +28,7 @@ blogBtn.addEventListener('click', (e) => {
     <img src=${blog.blogUrl}>
     <h2>${blog.blogTitle}</h2>
     <p>${blog.blogDescription}</p>
-    <button class="readBtn">Read</button>
+    <button class="readBtn" onClick="btnClicked(event)">Read</button>
     </div>`
 
     if (localStorage.length > 1) {
@@ -65,7 +66,22 @@ function loadData() {
     blogsGrid.innerHTML = items
 }
 
-// readBtn.addEventListener("click", (e) => {
-//     e.preventDefault()
-//     console.log("clicked on read");
-// })
+const btnClicked = (event) => {
+    const e = event.target.parentNode.getElementsByTagName("h2")[0].innerText
+    const elementObj = localStorage.getItem(e)
+    section.style.display = "none"
+    article.style.display = "flex"
+    const json = JSON.parse(elementObj)
+    article.innerHTML = `<div>
+    <div class="headingBlog">
+        <img src=${json.blogUrl} alt="img">
+        <div class="heading">
+            <h1>${json.blogTitle}</h1>
+            <p>${json.blogDescription}</p>
+        </div>
+    </div>
+    <p>${json.blogText}</p>
+</div>`
+
+}
+

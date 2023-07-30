@@ -29,10 +29,10 @@ body {
     margin: auto;
     position: absolute;
     z-index: 10;
-    left: 38vw;
-    top: 20vh;
+    left: 38%;
+    top: 20%;
     display: none;
-    transition: 3s;
+    transition: 1s;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -120,7 +120,7 @@ img {
     position: absolute;
     bottom: 58vh;
     transform: rotate(45deg);
-    left: 26vw;
+    left: 18vw;
     font-size: 2rem;
 }
 
@@ -140,7 +140,6 @@ img {
 } */
 
 article {
-    display: flex;
     flex-direction: column;
     height: 100vh;
     gap: 2rem;
@@ -156,6 +155,7 @@ article .headingBlog {
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    flex-direction: row-reverse;
     background-color: #5A20CB;
     padding: 2rem;
     border-radius: 1rem;
