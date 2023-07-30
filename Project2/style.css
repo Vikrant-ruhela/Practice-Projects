@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #808080;
+    background-color: #120E43;
 }
 
 h1 {
@@ -38,9 +38,9 @@ input:focus {
     align-items: center;
     gap: 0.8rem;
     border-radius: 20px;
-    background-color: #f48585;
+    background-color: #3944F7;
     width: 300px;
-    height: 400px;
+    height: 380px;
     overflow: hidden;
     padding: 20px;
 }
@@ -52,11 +52,11 @@ input:focus {
 }
 
 button {
-    padding: 6px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 6px;
     border: transparent;
     width: 100%;
-    background-color: red;
+    background-color: #B4161B;
     color: #fff;
 }
 
