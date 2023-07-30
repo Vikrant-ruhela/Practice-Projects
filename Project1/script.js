@@ -3,6 +3,7 @@ const popup = document.querySelector(".popup")
 const section = document.querySelector("section")
 const article = document.querySelector("article")
 const sub = document.querySelector(".sub")
+const nav = document.querySelector("nav")
 
 const blogUrl = document.getElementById("blogUrl")
 const blogTitle = document.getElementById("blogTitle")
@@ -39,6 +40,7 @@ blogBtn.addEventListener('click', (e) => {
         blogsGrid.innerHTML = items
         popup.style.display = "none"
         section.style.filter = ""
+        nav.style.filter = ""
         return
     }
     localStorage.setItem(`${blog.blogTitle}`, JSON.stringify(blog))
@@ -46,6 +48,7 @@ blogBtn.addEventListener('click', (e) => {
     blogsGrid.innerHTML = blogs
     popup.style.display = "none"
     section.style.filter = ""
+    nav.style.filter = ""
 
 })
 
@@ -53,12 +56,14 @@ addBtn.addEventListener("click", (e) => {
     e.preventDefault()
     popup.style.display = "flex"
     section.style.filter = "blur(8px)"
+    nav.style.filter = "blur(8px)"
 })
 
 sub.addEventListener("click", (e) => {
     e.preventDefault()
     popup.style.display = "none"
     section.style.filter = ""
+    nav.style.filter = ""
 })
 
 function loadData() {
