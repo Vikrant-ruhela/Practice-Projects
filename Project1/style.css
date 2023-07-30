@@ -40,9 +40,6 @@ body {
     display: flex;
 }
 
-
-
-
 .popupContainer form {
     display: flex;
     flex-direction: column;
@@ -135,4 +132,36 @@ img {
     border-radius: 8px;
     font-weight: 600;
     width: 100%;
+}
+
+section {
+    display: none;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+article .headingBlog {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #5A20CB;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    color: #fff;
+}
+
+article .headingBlog img {
+    height: 200px;
+    width: 300px;
 }
