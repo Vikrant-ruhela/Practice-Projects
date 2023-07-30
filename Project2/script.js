@@ -1,10 +1,10 @@
 const input = document.querySelector('input')
-const searchTerm = input.value
 const cardGrid = document.querySelector(".cardGrid")
 
 
 const getMovie = () => {
-    fetch(`https://www.omdbapi.com/?s=%22avenger%22&apikey=fd998d3`).then((res) => {
+
+    fetch(`https://www.omdbapi.com/?s=%22${input.value}%22&apikey=fd998d3`).then((res) => {
         return res.json()
     }).then((result) => {
         if (result.Response == "True") {
@@ -22,10 +22,10 @@ const getMovie = () => {
             }
             cardGrid.innerHTML = r;
         } else {
-            cardGrid.innerHTML = `<h3 class='msg'>${data.Error}</h3>`;
+            cardGrid.innerHTML = `<h1 class='msg'>${data.Error}</h1>`;
         }
     }).catch(() => {
-        cardGrid.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+        cardGrid.innerHTML = `<h1 class="msg">Error Occured</h1>`;
     });
 }
 
