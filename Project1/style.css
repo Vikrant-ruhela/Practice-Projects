@@ -147,6 +147,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+    /* display: none; */
 }
 
 article .headingBlog {
@@ -161,7 +162,15 @@ article .headingBlog {
     color: #fff;
 }
 
+article .headingBlog .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-top: 2rem;
+}
+
 article .headingBlog img {
     height: 200px;
     width: 300px;
+    border: 2px solid #fff;
 }
