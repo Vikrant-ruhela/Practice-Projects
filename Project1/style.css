@@ -134,9 +134,9 @@ img {
     width: 100%;
 }
 
-section {
+/* section {
     display: none;
-}
+} */
 
 article {
     display: flex;
@@ -147,7 +147,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
-    /* display: none; */
+    display: none;
 }
 
 article .headingBlog {

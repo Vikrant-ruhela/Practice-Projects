@@ -8,36 +8,30 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body onload="loadData()">
     <nav>
         <div class="header">
             <h1>PW Skills Blog</h1>
             <button class="addBtn">+</button>
         </div>
     </nav>
+
     <div class="popup">
         <div class="popupContainer">
             <form action="">
                 <button class="sub">+</button>
-                <input type="text" placeholder="Enter Blog Post Url" name="blogUrl">
-                <input type="text" placeholder="Enter Blog Title" name="blogTitle">
-                <input type="text" placeholder="Enter Blog Description" name="blogdescription">
-                <textarea cols="27" rows="10" placeholder="write..." name="blog"></textarea>
+                <input type="text" placeholder="Enter Blog Post Url" id="blogUrl">
+                <input type="text" placeholder="Enter Blog Title" id="blogTitle">
+                <input type="text" placeholder="Enter Blog Description" id="blogDescription">
+                <textarea cols="27" rows="10" placeholder="write..." id="blogText"></textarea>
                 <button class="blogBtn" type="submit">Add blog</button>
             </form>
         </div>
     </div>
     <section>
         <div class="blogs">
-            <div class="card">
-                <img src="./assests/img.jpg" alt="img">
-                <h2>Blog title</h2>
-                <p>blogdescription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, quis.</p>
-                <button class="readBtn">Read</button>
-            </div>
-
+            <!-- blogs come here -->
         </div>
-
     </section>
 
     <article>
