@@ -51,6 +51,12 @@ blogBtn.addEventListener('click', (e) => {
     section.style.filter = ""
     nav.style.filter = ""
 
+
+    blogUrl.value = ""
+    blogTitle.value = ""
+    blogDescription.value = ""
+    blogText.value = ""
+
 })
 
 addBtn.addEventListener("click", (e) => {
