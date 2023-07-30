@@ -97,6 +97,7 @@ img {
     padding: 1rem;
     border-radius: 20px;
     border: transparent;
+    height: 300px;
 }
 
 .readBtn {
